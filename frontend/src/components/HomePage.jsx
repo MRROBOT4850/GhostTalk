@@ -276,7 +276,7 @@ import SecurityIcon from '@mui/icons-material/Security';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import PeopleIcon from '@mui/icons-material/People';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-  const[roomCount,setRoomCount]=useState(0);
+ 
 const benefits = [
   {
     icon: <SecurityIcon color="primary" fontSize="large" />,
@@ -299,7 +299,33 @@ const benefits = [
     description: 'Connect with friends, teams, or strangers from anywhere in the world, anonymously.',
   },
 ];
+ 
+// const features = [
+//   {
+//     icon: <LockIcon color="primary" fontSize="large" />,
+//     title: 'No Logs, No Tracking',
+//     description: 'We don’t store chats or track users. Your privacy is our priority.',
+//   },
+//   {
+//     icon: <AccessTimeIcon color="primary" fontSize="large" />,
+//     title: '1-Hour Expiry',
+//     description: 'Every chat room expires 1 hour after it’s created — no data left behind.',
+//   },
+//   {
+//     icon: <GroupIcon color="primary" fontSize="large" />,
+//     title: `${roomCount} are Left`,
+//     description: 'Use any of the 100 available chat rooms — no limit, no wait.',
+//   },
+//   {
+//     icon: <ChatIcon color="primary" fontSize="large" />,
+//     title: 'Instant Messaging',
+//     description: 'Join or create a room in seconds. Start chatting instantly.',
+//   },
+// ];
 
+const HomePage = () => {
+       const[roomCount,setRoomCount]=useState(0);
+        
 const features = [
   {
     icon: <LockIcon color="primary" fontSize="large" />,
@@ -322,9 +348,6 @@ const features = [
     description: 'Join or create a room in seconds. Start chatting instantly.',
   },
 ];
-
-const HomePage = () => {
-       
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
