@@ -11,7 +11,7 @@ import NotFound from './components/NotFound'
 
 function App() {
  // const useMemo(() => first, [second])
-   const socket=useMemo(()=>io("http://localhost:3000/"),[]);
+   const socket=useMemo(()=>io("https://ghost-talk-5ofn.onrender.com/"),[]);
    const [hasName,setHasName]=useState(false);
    const [room,setRoom]=useState("")
    const [name,setName]=useState("");
