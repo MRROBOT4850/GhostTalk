@@ -251,7 +251,7 @@
 
 
 // export default HomePage;
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Box,
@@ -313,7 +313,7 @@ const features = [
   },
   {
     icon: <GroupIcon color="primary" fontSize="large" />,
-    title: '100 Active Rooms',
+    title: `${roomCount} are Left`,
     description: 'Use any of the 100 available chat rooms — no limit, no wait.',
   },
   {
@@ -324,11 +324,20 @@ const features = [
 ];
 
 const HomePage = () => {
+       
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const[roomCount,setRoomCount]=useState(0);
+  async function getRooms() {
+      const result=await fetch("https://ghost-talk-5ofn.onrender.com/get-roomCount");
+      const response=await result.json();
+      //console.log("roomcount hai "+roomCount);
+      setRoomCount(response.roomCount);
 
+   }
   useEffect(() => {
     AOS.init({ duration: 800, once: false, mirror: true });
+       getRooms();
   }, []);
 
   return (
