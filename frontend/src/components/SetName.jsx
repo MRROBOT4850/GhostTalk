@@ -17,7 +17,7 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
   const { enqueueSnackbar } = useSnackbar();
 
   async function checkRooms() {
-    const result=await fetch(`http://localhost:3000/check-rooms/${roomId}`);
+    const result=await fetch(`https://ghost-talk-5ofn.onrender.com//check-rooms/${roomId}`);
     const response =await result.json();
     console.log("check room called")
     return response.success;
