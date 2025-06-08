@@ -276,7 +276,7 @@ import SecurityIcon from '@mui/icons-material/Security';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import PeopleIcon from '@mui/icons-material/People';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-
+  const[roomCount,setRoomCount]=useState(0);
 const benefits = [
   {
     icon: <SecurityIcon color="primary" fontSize="large" />,
@@ -327,7 +327,7 @@ const HomePage = () => {
        
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const[roomCount,setRoomCount]=useState(0);
+
   async function getRooms() {
       const result=await fetch("https://ghost-talk-5ofn.onrender.com/get-roomCount");
       const response=await result.json();
