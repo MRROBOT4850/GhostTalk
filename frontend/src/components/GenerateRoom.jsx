@@ -32,7 +32,7 @@ function GenerateRoom() {
   async function getRooms() {
       const result=await fetch("http://localhost:3000/get-roomCount");
       const response=await result.json();
-      console.log("roomcount hai "+roomCount);
+      //console.log("roomcount hai "+roomCount);
       setRoomCount(response.roomCount);
 
    }
@@ -98,7 +98,7 @@ function GenerateRoom() {
       setHasCopied(true);
     } catch (err) {
       enqueueSnackbar("Error copying Room ID", { variant: "warning" });
-      console.error("Clipboard copy failed:", err);
+      //console.error("Clipboard copy failed:", err);
     }
     }
     else{
@@ -132,10 +132,10 @@ function GenerateRoom() {
     
     if(roomCreated){
       postRoom();
-       console.log("room create ho vgya hai"+roomCreated);
+       //console.log("room create ho vgya hai"+roomCreated);
     }
     
-    console.log(roomCreated);
+    //console.log(roomCreated);
     setHasCopied(false);
   }, [roomCreated]);
 
