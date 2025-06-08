@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const allowedOrigin = process.env.CLIENT_URL
 const io = new Server(server, {
   cors: {
-    origin:allowedOrigin,
+    origin:"https://ghost-talk-tan.vercel.app",
     methods:["GET","POST"],
     credentials: true
   }
