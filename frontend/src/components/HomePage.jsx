@@ -277,6 +277,7 @@ import SecurityIcon from '@mui/icons-material/Security';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import PeopleIcon from '@mui/icons-material/People';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'; 
  
 const benefits = [
   {
@@ -337,6 +338,11 @@ const features = [
     icon: <LockIcon color="primary" fontSize="large" />,
     title: 'No Logs, No Tracking',
     description: 'We don’t store chats or track users. Your privacy is our priority.',
+  },
+   {
+    icon: <VisibilityOffIcon color="primary" fontSize="large" />,
+    title: 'Anonymous Mode',
+    description: 'No usernames, no profiles. Just pure anonymous chatting.',
   },
   {
     icon: <AccessTimeIcon color="primary" fontSize="large" />,
