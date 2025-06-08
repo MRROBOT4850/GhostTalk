@@ -41,11 +41,16 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
     }
     setHasName(true);
     onDataChange(name, roomId);
-    if(ans){
-     // console.log("room theek hai")
-      socket.connect();
-      socket.emit("notify-user",obj);
-    }
+    if (ans) {
+  try {
+    socket.connect();
+    socket.emit("notify-user", obj);
+  } catch (err) {
+    console.error("Socket connection error:", err);
+    enqueueSnackbar("Failed to notify room. Please try again.", { variant: "error" });
+  }
+}
+
     //postRoom();
     //console.log("postman call ho gya hai")
     enqueueSnackbar(`Welcome, ${name}! Joined room: ${roomId}`, { variant: "success" });
