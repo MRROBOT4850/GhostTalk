@@ -16,7 +16,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import ShareIcon from "@mui/icons-material/Share";
 import { useSnackbar } from "notistack";
 import SendMail from "./SendMail";
-
+import Tagline from "./TagLine";
 function GenerateRoom() {
   const [limit,setLimit]=useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -161,6 +161,7 @@ function GenerateRoom() {
           borderRadius: 3,
         }}
       >
+        <Tagline/><br /> <br />
         <Typography variant="h4" gutterBottom fontWeight="bold">
           🔐 Generate a Private Chat Room
         </Typography>
