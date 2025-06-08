@@ -40,12 +40,12 @@ const ChatRoom = () => {
     });
 
     socket.on('message-received', (obj) => {
-      console.log("message received "+obj.message)
+     // console.log("message received "+obj.message)
       setMessages((prev) => [...prev, obj]);
     });
 
     socket.on('user-connect', (id) => {
-      console.log(`User connected: ${id}`);
+     // console.log(`User connected: ${id}`);
     });
     socket.on("roomClosed",(msg)=>{
       enqueueSnackbar(`Welcome, ${name}! Joined room: ${roomId}`, {
@@ -61,7 +61,7 @@ const ChatRoom = () => {
 
     })
     socket.on('user-disconnect', (id) => {
-      console.log(`User disconnected: ${id}`);
+      //console.log(`User disconnected: ${id}`);
     });
 
     return () => {
@@ -90,7 +90,7 @@ const ChatRoom = () => {
     };
 
     socket.emit('receive-messages', obj);
-    console.log("message bhej diya "+obj.message +"send by "+obj.sender )
+    //console.log("message bhej diya "+obj.message +"send by "+obj.sender )
     setInputMessages('');
   };
 
