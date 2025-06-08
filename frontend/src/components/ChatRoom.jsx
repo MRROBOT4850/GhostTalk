@@ -129,7 +129,7 @@ const ChatRoom = () => {
           <Typography variant="h5" gutterBottom>
             Chat Room: {room}
           </Typography>
-          <Typography>{roomCount}</Typography>
+         
           <Divider sx={{ mb: 2 }} />
 
           {/* Scrollable Message Area */}
