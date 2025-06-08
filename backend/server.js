@@ -76,6 +76,17 @@ async function processEmailQueue() {
         // Optionally re-add to the queue or handle error
     }
 }
+app.get('/check-rooms/:roomId', (req, res) => {
+  const { roomId } = req.params;
+
+  if (!roomId) {
+    return res.status(400).json({ success: false, message: "Room ID is required" });
+  }
+
+  const exists = roomMap.has(roomId);
+
+  return res.json({ success: exists });
+});
 app.post("/send-gmail",async (req,res)=>{
  
   const {to}=req.body;
