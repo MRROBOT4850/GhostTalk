@@ -39,7 +39,7 @@ function GenerateRoom() {
   async function postRoom() {
        if(roomCount>0){
            try{
-          const response=await fetch("http://localhost:3000/register-room",{
+          const response=await fetch("https://ghost-talk-5ofn.onrender.com/register-room",{
             method:"POST",
              headers: {
             'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function GenerateRoom() {
  const generateHandler = async () => {
   setIsGenerating(true);
   const nanoId = nanoid(8);
-  const result = await fetch("http://localhost:3000/get-roomCount");
+  const result = await fetch("https://ghost-talk-5ofn.onrender.com/get-roomCount");
   const response = await result.json();
   setRoomCount(response.roomCount);
   setRoomId(nanoId);
