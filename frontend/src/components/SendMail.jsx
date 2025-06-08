@@ -18,7 +18,7 @@ function SendMail(){
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState('');
   async function handleSend(){
-      const result=await fetch("http://localhost:3000/send-gmail",{
+      const result=await fetch("https://ghost-talk-5ofn.onrender.com/send-gmail",{
         method:"POST",
          headers: {
             'Content-Type': 'application/json',
