@@ -6,9 +6,10 @@ const app = express();
 require('dotenv').config();
 const nodemailer=require("nodemailer")
 const server = http.createServer(app);
+const allowedOrigin = process.env.CLIENT_URL
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin:allowedOrigin,
     methods:["GET","POST"]
   }
 });
