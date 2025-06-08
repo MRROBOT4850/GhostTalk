@@ -265,6 +265,7 @@ import {
   Toolbar,
   Paper,
 } from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email'; 
 import ChatIcon from '@mui/icons-material/Chat';
 import LockIcon from '@mui/icons-material/Lock';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
