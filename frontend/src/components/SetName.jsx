@@ -35,7 +35,7 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
     const ans= await checkRooms();
     //console.log("check room ki valuue "+ans)
     if(!ans){
-      console.log("submit hanlder ke ander hai")
+      //console.log("submit hanlder ke ander hai")
       enqueueSnackbar("Invalid Room  ID",{variant:"warning"});
       return;
     }
