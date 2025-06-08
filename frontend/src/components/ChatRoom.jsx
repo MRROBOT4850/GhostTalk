@@ -27,7 +27,7 @@ const ChatRoom = () => {
    const [room, setRoom] = useState(roomID===""?"":roomID);
    const [roomCount,setRoomCount]=useState(0);
  async function getRooms() {
-      const result=await fetch("http://localhost:3000/get-roomCount");
+      const result=await fetch("https://ghost-talk-5ofn.onrender.com/get-roomCount");
       const response=await result.json();
       setRoomCount(response.roomCount);
 
