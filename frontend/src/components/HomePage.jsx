@@ -339,7 +339,7 @@ const features = [
   },
   {
     icon: <GroupIcon color="primary" fontSize="large" />,
-    title: `${roomCount} are Left`,
+    title: `${roomCount} Rooms are Left`,
     description: 'Use any of the 100 available chat rooms — no limit, no wait.',
   },
   {
