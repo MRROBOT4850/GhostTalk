@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const messages = [
-  "Say Anything. It Disappears Forever.",
+  "Say Anything. It Disappears.",
   "Private. Instant. Gone.",
-  "No Logs. No Traces. Just Talk.",
+  "No Logs. No Traces..",
 ];
 
 function TypingText({
