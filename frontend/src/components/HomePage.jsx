@@ -327,6 +327,11 @@ const HomePage = () => {
        const[roomCount,setRoomCount]=useState(0);
         
 const features = [
+       {
+    icon: <EmailIcon color="primary" fontSize="large" />,
+    title: 'Get Notified via Gmail',
+    description: 'Rooms full? Enter your Gmail, and we’ll notify you as soon as a spot opens.',
+  },
   {
     icon: <LockIcon color="primary" fontSize="large" />,
     title: 'No Logs, No Tracking',
