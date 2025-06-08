@@ -19,7 +19,7 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
   async function checkRooms() {
     const result=await fetch(`https://ghost-talk-5ofn.onrender.com/check-rooms/${roomId}`);
     const response =await result.json();
-    console.log("check room called")
+   // console.log("check room called")
     return response.success;
   }
   const submitHandler =async () => {
@@ -31,9 +31,9 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
       name:name,
       room:roomId
     }
-    console.log("submit hanlder called")
+    //console.log("submit hanlder called")
     const ans= await checkRooms();
-    console.log("check room ki valuue "+ans)
+    //console.log("check room ki valuue "+ans)
     if(!ans){
       console.log("submit hanlder ke ander hai")
       enqueueSnackbar("Invalid Room  ID",{variant:"warning"});
@@ -42,7 +42,7 @@ function SetName({ onDataChange, initialName = "", initialRoom = ""}) {
     setHasName(true);
     onDataChange(name, roomId);
     if(ans){
-      console.log("room theek hai")
+     // console.log("room theek hai")
       socket.connect();
       socket.emit("notify-user",obj);
     }
