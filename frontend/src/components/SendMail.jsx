@@ -27,7 +27,7 @@ function SendMail(){
       });
       const response=await result.json();
       setSuccess(response.success);
-      console.log("email ki value"+response);
+      //console.log("email ki value"+response);
       success?enqueueSnackbar("Email Sent SuccessFully",{variant:"success"}):enqueueSnackbar(response.message,{variant:"error"});
 
   }
