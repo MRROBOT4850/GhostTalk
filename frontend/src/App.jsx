@@ -20,6 +20,19 @@ function App() {
    const [roomGenerated,isRoomGenerated]=useState(false);
    const  [join,setJoin]=useState(false);
    const navigate=useNavigate();
+  useEffect(() => {
+    const pingServer = async () => {
+      try {
+        await fetch('https://ghost-talk-5ofn.onrender.com/ping');
+        
+      } catch (err) {
+        console.error('Failed to ping server:', err);
+      }
+    };
+    pingServer();
+    const interval = setInterval(pingServer, 10 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
  // useEffect(()=>{
     // socket.on("connection",()=>{
     //   console.log(`user connected ${socket.id}`)
