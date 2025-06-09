@@ -103,7 +103,7 @@ app.post("/send-gmail",async (req,res)=>{
             <h2 style="color: #4CAF50;">Request Accepted!</h2>
             <p>Your request has been approved. You can now join a room.</p>
             <p>
-              <a href="http://localhost:5173/generate-room" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">
+              <a href="https://ghost-talk-tan.vercel.app/generate-room" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">
                 Join a Room
               </a>
             </p>
@@ -194,6 +194,9 @@ app.post('/register-room', (req, res) => {
 });
 app.get("/",(req,res)=>{
   res.send("<h2>Server is Running </h2>")
+})
+app.get("/ping",(req,res)=>{
+   res.status(200).send('pong');
 })
 app.get("/get-roomCount",(req,res)=>{
   res.json({
