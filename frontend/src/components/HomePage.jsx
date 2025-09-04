@@ -364,7 +364,7 @@ const features = [
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   async function getRooms() {
-      const result=await fetch("https://ghost-talk-5ofn.onrender.com/get-roomCount");
+      const result=await fetch("https://ghost-talk-3shn.onrender.com/get-roomCount");
       const response=await result.json();
       //console.log("roomcount hai "+roomCount);
       setRoomCount(response.roomCount);
