@@ -11,7 +11,7 @@ import NotFound from './components/NotFound'
 
 function App() {
  // const useMemo(() => first, [second])
-   const socket=useMemo(()=>io("https://ghost-talk-5ofn.onrender.com/"),[]);
+   const socket=useMemo(()=>io("https://ghost-talk-3shn.onrender.com/"),[]);
    const [hasName,setHasName]=useState(false);
    const [room,setRoom]=useState("")
    const [name,setName]=useState("");
@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const pingServer = async () => {
       try {
-        await fetch('https://ghost-talk-5ofn.onrender.com/ping');
+        await fetch('https://ghost-talk-3shn.onrender.com/ping');
         
       } catch (err) {
         console.error('Failed to ping server:', err);
